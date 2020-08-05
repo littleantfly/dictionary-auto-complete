@@ -68,9 +68,15 @@ public class DictSerializer extends JsonSerializer<Object> implements Contextual
         return (property.getAnnotation(Dict.class) != null);
     }
 
+
+
     private DictModel getDict(Object value){
-        Dict dictGroupAnn = property.getAnnotation(Dict.class);
-        return dictService.getDictData(dictGroupAnn, value.toString());
+        Dict dictAnn = property.getAnnotation(Dict.class);
+        String data = dictAnn.data();
+        if(StringUtils.isEmpty(data)) {
+            data = property.getName();
+        }
+        return dictService.getDictData(data, value.toString());
     }
 
 

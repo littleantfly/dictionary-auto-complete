@@ -4,10 +4,8 @@ package com.github.littleantfly.dictionary;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ser.DictSerializerModifier;
 import com.github.littleantfly.dictionary.config.DictProperties;
-import com.github.littleantfly.dictionary.service.DefaultDictServiceImpl;
 import com.github.littleantfly.dictionary.service.DictService;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -25,12 +23,6 @@ public class DictionaryAutoConfiguration {
     @ConfigurationProperties(prefix = "dictionary")
     public DictProperties dictProperties(){
         return new DictProperties();
-    }
-
-    @Bean
-    @ConditionalOnMissingBean(DictService.class)
-    public DefaultDictServiceImpl dictService(){
-        return new DefaultDictServiceImpl();
     }
 
     @Bean

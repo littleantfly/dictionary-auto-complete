@@ -1,9 +1,12 @@
-package com.github.littleantfly.dictionary.model;
+package com.github.littleantfly.dictionarydemo.model;
 
 import com.github.littleantfly.dictionary.module.DictModel;
 
 import java.util.List;
 
+/**
+ * @author littl
+ */
 public class DictCacheModel {
 
     private String pdata;

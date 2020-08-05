@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/dict/")
 public class DictionaryController {
 
-//    @Resource
-//    private CacheService cacheService;
-
     @GetMapping("/{id}")
     public UserVO getUser(@PathVariable("id")String id){
         UserVO vo = new UserVO();
@@ -24,10 +21,4 @@ public class DictionaryController {
         return vo;
     }
 
-    @GetMapping("/add")
-    public void add(){
-//        DictModel dict = new DictModel();
-//        dict.setName("man");
-//        cacheService.cacheData("UserSex"+ DictionaryConstants.DICT_DELIMITER+"1", dict);
-    }
 }

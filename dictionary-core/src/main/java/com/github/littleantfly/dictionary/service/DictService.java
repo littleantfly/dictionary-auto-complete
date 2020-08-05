@@ -1,6 +1,5 @@
 package com.github.littleantfly.dictionary.service;
 
-import com.github.littleantfly.dictionary.annotation.Dict;
 import com.github.littleantfly.dictionary.module.DictModel;
 
 /**
@@ -10,9 +9,9 @@ import com.github.littleantfly.dictionary.module.DictModel;
 public interface DictService {
     /**
      * 获取字典数据
-     * @param dict
      * @param data
+     * @param fieldValue
      * @return
      */
-    DictModel getDictData(Dict dict, String data);
+    DictModel getDictData(String data, String fieldValue);
 }

@@ -1,7 +1,7 @@
-package com.github.littleantfly.dictionary;
+package com.github.littleantfly.dictionarydemo;
 
-import com.github.littleantfly.dictionary.model.DictCacheModel;
 import com.github.littleantfly.dictionary.module.DictModel;
+import com.github.littleantfly.dictionarydemo.model.DictCacheModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ public class DefaultDictCache {
      */
     static {
         DictCacheModel cacheModel = new DictCacheModel();
-        cacheModel.setPdata("USER_SEX");
+        cacheModel.setPdata("sex");
 
         List<DictModel> children = new ArrayList<>();
         children.add(get("男", "1"));

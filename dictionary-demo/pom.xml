@@ -21,6 +21,13 @@
     <dependencies>
 
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.56</version>
+        </dependency>
+
+
+        <dependency>
             <groupId>com.github.littleantfly</groupId>
             <artifactId>dictionary-spring-boot-starter</artifactId>
             <version>3.0-SNAPSHOT</version>

@@ -11,7 +11,7 @@ public class UserVO {
 
     private String username;
 
-    @Dict(data = "sex")
+    @Dict
     private Integer sex;
 
 
